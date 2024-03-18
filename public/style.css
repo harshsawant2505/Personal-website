@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+  
+}
+
+.header{
+    width: 100%;
+    background-color: black;
+    height: 85px;
+    color: white;
+    font-size: 1.1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: capitalize;
+
+}
+nav{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+a h2{
+    margin-left: 40px;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+input{
+    border: none;
+    border-radius: 5px;
+    height: 22px;
+}
+
+nav ul{
+   
+
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+li{
+    list-style: none;
+    
+}
+
+.main{
+    
+    height: 88vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 3rem;
+    color: white;
+  background-color: black;
+}
+.intro{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: 250px;
+
+
+
+   
+
+}
+button{
+
+ all: unset;
+    
+}
+.typing{
+    margin-left: 70px;
+    font-size: 3rem;
+}
+.left-main{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background:radial-gradient(circle, rgba(112,26,122,1) 0%, rgba(2,0,36,1) 40%, rgba(0,0,0,1) 65%) ; 
+    justify-content: center;
+    
+  
+   
+}
+
+.blob{
+   background-image: url(./assets/harsh.png);
+    width: 380px;
+    height: 380px;
+    background-size: cover;
+    -webkit-background-position: center;
+    background-position: center center;
+    margin: 20px;
+    box-shadow: 0 5px 5px 5px rgba(13, 110, 253, 0.2);
+    animation: animate 5s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+}
+
+@keyframes animate {
+    0%, 100%{
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50%{
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+}
