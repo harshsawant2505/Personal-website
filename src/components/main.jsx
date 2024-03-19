@@ -24,11 +24,11 @@ function Main(){
                 
                 </div>
             </div>  
-           <div className="blob"> </div>
+           <div className="outer-blob"><div className="blob"> </div></div>
         </div>
         
 
-    );
+    );      
 }
 
 export default Main;
