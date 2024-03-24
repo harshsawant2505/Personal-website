@@ -6,9 +6,16 @@
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
+ 
+}
+body{
+  background-color: black;
 }
 
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   background-color: black;
   height: 85px;
@@ -19,13 +26,7 @@
   font-style: normal;
   text-transform: capitalize;
 }
-nav {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 a h2 {
   margin-left: 40px;
   text-decoration: none;
@@ -34,13 +35,128 @@ a {
   text-decoration: none;
   color: white;
 }
+nav a:hover{
+  color: white;
+  opacity: 0.5;
+}
+.header .nav-btn{
+  cursor: pointer;
+  
+  display: none;
+  opacity: 0;
+  
+}
+@media only screen and (max-width: 768px) {
+  .header .nav-btn{
+    display: block;
+    opacity: 1;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+
+  } 
+  .header{
+    height: 90px;
+    
+  }
+  .header nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: rgb(21, 21, 21);
+    transition: 1s;
+    transform: translateY(-100vh);
+    font-size: 4rem;
+    z-index: 2;
+  }
+  nav a{
+    border: 3px solid white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .header .res_nav{
+    transform: none;
+  }
+  div.main {
+    height: 87vh;
+    width: 100%;
+    display: flex;
+   
+    flex-direction: column;
+    gap: 39px;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+    background-color: black;
+  }
+  .left-main .intro h1{
+    font-size: 4.5rem;
+   
+  
+    
+  }
+  .left-main .intro {
+   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+div.left-main{
+   
+   
+    margin: 0;
+    width: 100%;
+    height: 472px;
+ 
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+  }
+  .typing p{
+    font-size: 2.6rem;
+  }
+  div.skills{
+    margin-top: 100px;
+   
+  }
+  div.outer-blob{
+   
+    order: -1;
+    margin: 0;
+    scale: 1.2;
+    z-index: 0;
+  }
+  div.skills-container img{
+      transform: scale(0.8);
+ 
+  }
+
+
+  
+}
+
 input {
   border: none;
   border-radius: 5px;
   height: 22px;
 }
 
-nav ul {
+nav  {
   width: 50%;
   display: flex;
   justify-content: space-evenly;
@@ -51,7 +167,8 @@ li {
 }
 
 .main {
-  height: 87vh;
+  height: 100vh;
+  
   width: 100%;
   display: flex;
   align-items: center;
@@ -78,14 +195,15 @@ button {
 .left-main {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  background: radial-gradient(
+  height: 400px;
+   background: radial-gradient(
     circle,
     rgba(112, 26, 122, 1) 0%,
     rgba(2, 0, 36, 1) 40%,
     rgba(0, 0, 0, 1) 65%
-  );
+  ); 
   justify-content: center;
+  animation: slide 0.8s ease-in-out;
 }
 
 .blob {
@@ -98,6 +216,8 @@ button {
   margin: 20px;
   box-shadow: 0 5px 5px 5px rgba(13, 110, 253, 0.2);
   animation: animate 5s ease-in-out infinite;
+  
+  
   transition: all 1s ease-in-out;
 }
 
@@ -110,6 +230,24 @@ button {
     border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
   }
 }
+@keyframes slide {
+  0%{
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+   transform: translateY(0%);
+   opacity: 1;
+  }
+}
+.nav-open-btn{
+  margin-right: 60px;
+ 
+}
+
+
+
+
 h1 {
   font-size: 4.5rem;
 }
@@ -129,8 +267,10 @@ span {
   align-items: center;
   justify-content: center;
 
-  height: 520px;
+  height:520px;
+ 
   width: 520px;
+  animation: slide 0.8s ease-in-out;
 }
 
 button i {
@@ -163,7 +303,7 @@ button i {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   column-gap: 20px;
-  row-gap: 20px;
+  row-gap: 30px;
   margin-top: 40px;
 }
 .img-div {
@@ -184,6 +324,7 @@ button i {
 .skills {
   background-color: black;
   color: white;
+  margin-bottom: 30px ;
 }
 .skills h2 {
   text-align: center;
