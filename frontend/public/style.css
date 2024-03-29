@@ -17,6 +17,7 @@
 
 
 .header {
+ 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,6 +44,12 @@ nav a:hover{
   color: white;
   opacity: 0.5;
 }
+nav a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
 .header .nav-btn{
   cursor: pointer;
   
@@ -52,8 +59,10 @@ nav a:hover{
 }
   @media only screen and (max-width: 768px) {
 
-    div.socials-container{
+   div.main div.socials-container{
+       display: flex;
         justify-content: center;
+        align-items: center;
         margin-top: 10px;
     }
 
@@ -68,10 +77,23 @@ nav a:hover{
   
 
   } 
+  button.nav-close-btn{
+    position: absolute;
+   top: 3%;
+   left: 82.1%;
+    
+  }
   .header{
     height: 90px;
+  
 
     
+  }
+  .header nav a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
   }
   .header nav{
     position: fixed;
@@ -91,17 +113,45 @@ nav a:hover{
     z-index: 2;
   }
   nav a{
-    border: 3px solid white;
+    
     width: 100%;
     display: flex;
     justify-content: center;
     font-size: 2rem;
+    transform: translateX(-100vh);
+    opacity: 0;
+    transition: all 1s;
+   
+   
   }
+
   div.header a h2{
     font-size: 1.56rem;
   }
   .header .res_nav{
-    transform: none;
+    transform:  none
+    
+    /* transform: translateY(+10vh);   */
+  }
+  .res_but1{
+      transform: none;
+      transition-delay: 0.2s ;
+      opacity: 1;
+  }
+  .res_but2{
+      transform: none;
+      transition-delay: 0.3s ;
+      opacity: 1;
+  }
+  .res_but3{
+      transform: none;
+      transition-delay: 0.4s ;
+      opacity: 1;
+  }
+  .res_but4{
+      transform: none;
+      transition-delay: 0.5s ;
+      opacity: 1;
   }
  
 
@@ -158,6 +208,11 @@ div.outer-blob .blob {
   width: 1.5rem;
   margin-right: 0;
 }
+div div.footer {
+  
+  border-radius: 0;
+ 
+}
 
   
 }  
@@ -167,6 +222,7 @@ input {
   border-radius: 5px;
   height: 22px;
 }
+
 
 nav  {
   width: 50%;
@@ -289,18 +345,46 @@ span {
 button i {
   font-size: 1.4rem;
 }
-.footer {
-  background-color: black;
+ div.footer {
+  background-color: rgb(21, 21, 21);
+  border-radius: 20px 20px 0 0;
   color: white;
-  height: 40px;
+  height: 300px;
   margin: 0;
+  gap: 30px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.footer p {
-  opacity: 0.4;
+.socials-icon{
+  transition:transform 0.3s ease-in-out;
+
+
+  
+
 }
+div.socials-container{
+  width: fit-content;
+  margin-top: 40px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  animation: slide 0.8s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.socials-icon:hover{
+  transform: scale(1.1);
+
+
+
+}
+
+
 
 .skills-container div img {
   width: 150px;
@@ -318,6 +402,7 @@ button i {
   column-gap: 20px;
   row-gap: 30px;
   margin-top: 40px;
+  margin-bottom: 150px;
 }
 .img-div {
   display: flex;
@@ -347,4 +432,29 @@ button i {
 }
 .skills-container div img:hover {
   transform: scale(1.15);
+}
+.footer p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.4;
+  gap: 10px;
+ 
+}
+.nav-footer{
+  opacity: 0.4;
+  display: flex;
+  gap: 15px;
+  justify-content: space-around;
+  width: 50%;
+  text-transform: capitalize;
+}
+.footer-date{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: black;
+  height: 50px;
+  
 }

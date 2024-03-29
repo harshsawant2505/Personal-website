@@ -1,26 +1,28 @@
-import React,{useState} from "react";
+import React, { useEffect } from "react";
 
 import {useTypewriter, Cursor} from "react-simple-typewriter"
 import Socials from "./Socials"
 import { useMediaQuery } from 'react-responsive';
 
-
+let isMobile
  
 
-function Main(){
+function Main({user}){
         const [text] =useTypewriter({
             words: ["Web Developer", "Video Editor","Graphic Designer"],
             loop: {}
         })
-        const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
    
+        
+        
+        isMobile = useMediaQuery({ query: `(max-width: 760px)` });
 
  
     return(
         <div className="main">
                     <div className="left-main">   
                         <div className="intro">
-                        <h1> Hey this is, <br /> Harsh Sawant </h1>
+                        <h1> Hey this is, <br /> {user} </h1>
                         </div>
 
                         <div className="typing">
@@ -47,3 +49,4 @@ function Main(){
 }
 
 export default Main;
+export {isMobile};
