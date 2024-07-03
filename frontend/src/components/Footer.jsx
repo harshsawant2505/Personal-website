@@ -2,6 +2,7 @@
  
 import { FaHeart } from 'react-icons/fa';
 import Socials from './Socials';
+import ElementHeader from './ElementHeader';
     
     function Footer() {
       return (
@@ -12,10 +13,10 @@ import Socials from './Socials';
        
         
         <div className='nav-footer'>
-            <a>Home</a>
-            <a>about</a>
-            <a>skills</a>
-            <a>contact</a>
+                    <ElementHeader classname ="" href = "/" style = {{}} content = "Home"   />
+                    <ElementHeader classname ="" href = "/about" style = {{}} content = "about"  />
+                    <ElementHeader classname ="" href = "/skills" style ={{}}  content = "skills"  />
+                    <ElementHeader classname ="" href = "/contact" style ={{}}  content = "contact"  />
         </div>
 
         </div>

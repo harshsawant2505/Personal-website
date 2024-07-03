@@ -22,7 +22,7 @@ function Main({user}){
         <div className="main">
                     <div className="left-main">   
                         <div className="intro">
-                        <h1> Hey this is, <br /> {user} </h1>
+                        <h1> Hey this is, <br /> Harsh Sawant </h1>
                         </div>
 
                         <div className="typing">

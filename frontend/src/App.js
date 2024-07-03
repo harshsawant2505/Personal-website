@@ -17,11 +17,7 @@ function App() {
     setbackendData(response.data);
   }
 
-  useEffect(() => {
-    getData();
-  
-    
-  }, [])
+
   
 
 
